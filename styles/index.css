@@ -1,0 +1,189 @@
+/* 모바일 기준 w440 */
+html {scroll-behavior: smooth;} /* 스크롤 애니메이션 효과 */
+body {background-color: #222;}
+        body, html {background-color:#111;}
+        /* Firefox */
+        html {scrollbar-width: 10px;;scrollbar-color: #6ec266 #0b3fa0;}
+        /* Opera */
+        html::-o-scrollbar {width: 10px;}
+        html::-o-scrollbar-thumb {background-color: #6ec266;border-radius: 5px;}
+        /* Chrome, Safari, Edge 등 웹킷 기반 브라우저 */
+        ::-webkit-scrollbar {width: 10px;}
+        ::-webkit-scrollbar-track {box-shadow: inset 0 0 5px rgba(0, 0, 0, 0.3);}
+        ::-webkit-scrollbar-thumb {background-color: #6ec266;border-radius: 5px;}
+#wrap {
+    width: 440px; /* 디자인 기준 크기 (iphone 17proMax) */
+    min-width: 320px; /* 최소 제한 너비(고정) */
+    max-width: 440px; /* 최대 제한 너비(디자인에 따라 다름) */
+    box-shadow: 0 10px 10px rgba(0, 0, 0, 0.3);
+    margin: 0 auto;
+    background-color: #fff;
+    overflow-x: hidden; /* x축 나간요소와 가로스크롤 숨기기 */
+    height: 100vh;
+}
+/* ======================================1. intro */
+#wrap .intro {
+    height: 100vh;
+    background: linear-gradient( 25deg, #FF7E7E, #FFC2AF, #FFE5C1, #99CDF9, #3E81B8);
+    display: flex; flex-flow: row nowrap;
+    justify-content: center; align-items: center;
+}
+#wrap .intro h1 {}
+#wrap .intro h1 span {
+    display: block; text-align: center;
+    line-height: 27px;
+    font-size: 1.25rem;
+}
+#wrap .intro h1 span:nth-child(1) {}
+#wrap .intro h1 span:nth-child(2) {
+    margin-bottom: 20px;
+    font-weight: 600;
+}
+#wrap .intro h1 .name {}
+/* ======================================2. info */
+#wrap .info {
+    height: 100vh; display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-flow: column nowrap;
+}
+#wrap .info .photo {
+    width:162px; height:162px ; border-radius:5px ;
+    background-color:#D9D9D9 ;
+}
+#wrap .info .photo img {
+    width: 100%;
+}
+#wrap .info .me {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-around;
+    margin-bottom: 30px;
+    padding: 20px;
+}
+#wrap .info .me li {
+    line-height: 27px;
+}
+#wrap .info .me li {width: 100%; text-align: center; margin: 0 0 12px;
+}
+#wrap .info .me li:nth-child(1) {text-align: right;}
+#wrap .info .me li:nth-child(2) {text-align: left;}
+#wrap .info .me li:nth-child(1),
+#wrap .info .me li:nth-child(2) {width: 40%;}
+#wrap .info .me li:nth-child(2) {width: 50%;}
+#wrap .info .me li:nth-child(1),
+#wrap .info .me li:nth-child(2),
+#wrap .info .me li:nth-child(3){
+    font-weight: 600;
+}
+#wrap .info .me li:nth-child(1),
+#wrap .info .me li:nth-child(2) {
+}
+#wrap .info .me li a {}
+#wrap .info h2 {
+    font-size: 1.25rem;
+    font-weight: 600;
+    margin-bottom: 30px;
+}
+#wrap .info .skill {
+    width: 262px;
+    display: flex;
+    flex-flow: row wrap;
+    gap:15px;
+    /* width: calc(50px * 4 + 15px * 3); */
+    justify-content: center;
+}
+#wrap .info .skill p {
+    width:calc(100% / 4) ; 
+}
+#wrap .info .skill p img {
+    width: 100%
+}
+#wrap .info .skill img:nth-child(2) {
+}
+/* ======================================3. project */
+#wrap .project_wrap {
+    margin-top: 50px;
+
+}
+#wrap .project_wrap h1 {
+    font-weight: 600;
+    font-size: 1.25rem;
+    text-align: center;
+    margin-bottom: 30px;
+}
+/* ======================================공통 프로젝트 선택자 */
+#wrap .project_wrap .project {
+    width: calc(100% - 15px);
+    margin: 0 auto 50px;
+} /* 공용 */
+#wrap .project_wrap .project h2 {
+
+}
+#wrap .project_wrap .project h2 span {
+
+}
+#wrap .project_wrap .project .mockup {}
+#wrap .project_wrap .project .mockup img {width: 100%; background-color: #0b3fa0;}
+#wrap .project_wrap .project .info {
+    height: 108px;
+    font-size: 0.875rem;
+    display: flex;
+    align-items: flex-start;
+    margin-top: 10px;
+}
+#wrap .project_wrap .project .info li {
+    line-height: 27px;
+    position: relative; padding-left: 15px;
+}
+#wrap .project_wrap .project .info li::before {
+    content: ''; display: block;
+    position: absolute; left: 0; top: 40%; transform:translateY(-50%);
+    background: #222; border-radius: 50%; width: 4px; height: 4px;
+}
+/* #wrap .project_wrap .project .info li:nth-child(3):before {top: 20%;} */
+#wrap .project_wrap .project .plan {
+    font-size: 0.875rem;
+}
+#wrap .project_wrap .project .link {}
+#wrap .project_wrap .project .link a {}
+#wrap .project_wrap .project .link .proposal {}
+#wrap .project_wrap .project .link .prototype {}
+/* ======================================개별 프로젝트 선택자 */
+#wrap .project_wrap .project1 {}
+#wrap .project_wrap .project1 h2 {
+    font-size: 1.25rem;
+    margin-bottom: 10px;
+}
+#wrap .project_wrap .project1 h2 span {
+    font-weight: 600;
+}
+#wrap .project_wrap .project1 .mockup {}
+#wrap .project_wrap .project1 .mockup img {}
+#wrap .project_wrap .project1 .info {}
+#wrap .project_wrap .project1 .info li {}
+#wrap .project_wrap .project1 .plan {
+    margin-top: 20px;
+    line-height: 27px;
+}
+#wrap .project_wrap .project1 .link {
+    margin-top: 25px;
+    font-size: 0.875rem;
+    margin-bottom: 252px;
+}
+#wrap .project_wrap .project1 .link a:nth-child(1) {
+    background-color: #7284DE;
+    padding:13px 16px;
+    font-size: 0.875rem;
+    border-radius: 10px;
+    color: #fff;
+}
+#wrap .project_wrap .project1 .link a:nth-child(2) {
+    background-color: #001164;
+    padding:13px 16px;
+    font-size: 0.875rem;
+    border-radius: 10px;
+    color: #fff;
+}
+#wrap .project_wrap .project1 .link .proposal {}
+#wrap .project_wrap .project1 .link .prototype {}
